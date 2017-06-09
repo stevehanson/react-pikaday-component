@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -179,24 +183,24 @@ var ReactPikadayComponent = function (_React$Component) {
 }(_react2.default.Component);
 
 ReactPikadayComponent.propTypes = {
-    id: _react.PropTypes.string,
-    type: _react.PropTypes.string,
-    value: _react.PropTypes.instanceOf(Date),
-    onChange: _react.PropTypes.func,
-    disabled: _react.PropTypes.bool,
-    placeholder: _react.PropTypes.string,
-    readOnly: _react.PropTypes.bool,
-    name: _react.PropTypes.string,
-    style: _react.PropTypes.object,
-    tabIndex: _react.PropTypes.number,
-    valueLink: _react.PropTypes.shape({
-        value: _react.PropTypes.instanceOf(Date),
-        requestChange: _react.PropTypes.func.isRequired
-    })
+    id: _propTypes2.default.string,
+    type: _propTypes2.default.string,
+    value: _propTypes2.default.instanceOf(Date),
+    onChange: _propTypes2.default.func,
+    disabled: _propTypes2.default.bool,
+    placeholder: _propTypes2.default.string,
+    readOnly: _propTypes2.default.bool,
+    name: _propTypes2.default.string,
+    style: _propTypes2.default.object,
+    tabIndex: _propTypes2.default.number,
+    valueLink: _propTypes2.default.shape({
+        value: _propTypes2.default.instanceOf(Date),
+        requestChange: _propTypes2.default.func.isRequired
+    }
 
     // see Pikaday options at https://github.com/dbushell/Pikaday#configuration
     // except `onSelect` and `field`
-};
+    ) };
 ReactPikadayComponent.defaultProps = {
     type: 'text'
 };
